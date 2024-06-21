@@ -5,7 +5,7 @@ SELECT
     changelogs.from_status as status,
     issues.created_at as start_date,
     changelogs.created_at as end_date,
-    EXTRACT(EPOCH FROM changelogs.created_at - issues.created_at)
+    EXTRACT(EPOCH FROM changelogs.created_at - issues.created_at) as calendar_duration
 FROM
     changelogs
 INNER JOIN issues
